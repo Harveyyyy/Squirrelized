@@ -8,8 +8,28 @@
     <title>The Squirrel Project</title>
 </head>
 <body>
-    <video src="https://cdn.discordapp.com/attachments/813871141109104680/906750130584162395/351px9.mp4" autoplay loop muted></video>
+    <button onclick="myFunction();" style="font-size:30px; color:white; ">Abra Kadabra</button>
+    <video id = "vid" src="https://cdn.discordapp.com/attachments/813871141109104680/906750130584162395/351px9.mp4" style="display:none;" loop></video>
 </body>
 <script>
+
+    var vid = document.getElementById("vid");
+    vid.muted=true;
+
+    function myFunction() {
+        var x = document.getElementById("vid");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+
+        if (vid.muted == true){
+            vid.muted=false;
+        } else{
+            vid.muted=true;
+        }
+        vid.play();
+    }
 </script>
 </html>
